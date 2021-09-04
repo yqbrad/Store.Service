@@ -23,12 +23,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Agg\Dtoes\" />
-	  <Folder Include="Agg\Entities\" />
-	  <Folder Include="Agg\Events\" />
-	  <Folder Include="Agg\Exceptions\" />
-	  <Folder Include="Agg\Requests\" />
-	  <Folder Include="Agg\ValueObjects\" />
+	  <Folder Include="ProductOptionAgg\Dtoes\" />
+	  <Folder Include="ProductOptionAgg\Events\" />
+	  <Folder Include="ProductOptionAgg\Exceptions\" />
+	  <Folder Include="ProductOptionAgg\Requests\" />
+	  <Folder Include="ProductOptionAgg\ValueObjects\" />
 	</ItemGroup>
 
 	<ItemGroup>
