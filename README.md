@@ -9,7 +9,7 @@ Project for employment in Datin company
 - ProductOption
 
 ## Features used:
-- SlqServer for main database.
+- SQLServer for main database.
 - Redis for cache products.
 - Health check for check sql and redis healthy. (/hc)
 - Swagger for documentation.
