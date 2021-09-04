@@ -1,4 +1,5 @@
-﻿using Store.Contracts._Base;
+﻿using Store.Contracts;
+using Store.Contracts._Base;
 using Store.DomainModels._Exceptions;
 using System;
 using System.Threading.Tasks;
@@ -8,16 +9,21 @@ namespace Store.Infrastructure.DataAccess._Base
     public sealed class UnitOfWork<TDbContext> : IUnitOfWork
         where TDbContext : BaseDbContext
     {
-        //public IAppRepository App { get; }
+        public IProductRepository Product { get; }
+        public IProductOptionRepository ProductOption { get; }
 
         private readonly TDbContext _dbContext;
         private readonly IUnitOfWorkConfiguration _config;
-        public UnitOfWork(TDbContext dbContext, IUnitOfWorkConfiguration config)
+        public UnitOfWork(TDbContext dbContext,
+            IUnitOfWorkConfiguration config,
+            IProductRepository product,
+            IProductOptionRepository productOption)
         {
             _dbContext = dbContext;
             _config = config;
 
-            //App = app;
+            Product = product;
+            ProductOption = productOption;
         }
 
         public void InitiateDatabase()

@@ -2,9 +2,12 @@
 using Framework.Domain.Events;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Store.Contracts;
 using Store.Contracts._Base;
 using Store.EndPoints.API.Configuration;
 using Store.Infrastructure.DataAccess._Base;
+using Store.Infrastructure.DataAccess.ProductAgg;
+using Store.Infrastructure.DataAccess.ProductOptionAgg;
 using Store.Infrastructure.Service;
 using Store.Infrastructure.Service.Dispatcher;
 using Store.Infrastructure.Service.EventSourcing;
@@ -22,6 +25,9 @@ namespace Store.EndPoints.API
 
             services.AddSingleton<IInternalEventDispatcher, InternalEventDispatcher>();
             services.AddScoped<IEventBus, EventBus>();
+
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IProductOptionRepository, ProductOptionRepository>();
 
         }
     }
