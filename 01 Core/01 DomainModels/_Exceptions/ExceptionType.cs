@@ -11,6 +11,7 @@ namespace Store.DomainModels._Exceptions
         ProductNotFoundException = 102,
         ProductOptionNotFoundException = 103,
         ProductNameDuplicateException = 104,
+        ProductOptionNameDuplicateException = 105,
     }
 
     public static class ExceptionTypeExtension

@@ -9,6 +9,7 @@
 
 	<ItemGroup>
 		<Folder Include="ProductAgg\Event\" />
+		<Folder Include="ProductOptionAgg\Event\" />
 	</ItemGroup>
 
 	<ItemGroup>
