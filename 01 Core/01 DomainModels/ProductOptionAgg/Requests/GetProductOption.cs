@@ -1,15 +1,17 @@
-﻿using System;
-using Framework.Domain.Requests;
+﻿using Framework.Domain.Requests;
+using System;
 
 namespace Store.DomainModels.ProductOptionAgg.Requests
 {
     public class GetProductOption : IRequest
     {
-        public Guid Id { get; private set; }
+        public Guid ProductId { get; private set; }
+        public Guid ProductOptionId { get; private set; }
 
-        public GetProductOption(Guid id)
+        public GetProductOption(Guid productId, Guid productOptionId)
         {
-            Id = id;
+            ProductId = productId;
+            ProductOptionId = productOptionId;
         }
     }
 }
