@@ -117,4 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DataAccessException" xml:space="preserve">
+    <value>خطا در لایه دسترسی به داده ها</value>
+  </data>
+  <data name="InitializeDataBaseException" xml:space="preserve">
+    <value>خطا در آماده سازی دیتابیس</value>
+  </data>
+  <data name="ProductNameDuplicateException" xml:space="preserve">
+    <value>نام محصول تکراری می باشد</value>
+  </data>
+  <data name="ProductNotFoundException" xml:space="preserve">
+    <value>محصول مورد نظر یافت نشد</value>
+  </data>
+  <data name="ProductOptionNameDuplicateException" xml:space="preserve">
+    <value>نام آپشن محصول تکراری می باشد</value>
+  </data>
+  <data name="ProductOptionNotFoundException" xml:space="preserve">
+    <value>آپشن محصول مورد نظر یافت نشد</value>
+  </data>
 </root>
