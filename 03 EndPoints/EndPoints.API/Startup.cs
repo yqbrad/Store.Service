@@ -28,7 +28,7 @@ namespace Store.EndPoints.API
             services.Inject(Configuration);
             services.AddResponseCaching();
             services.AddSwagger(serviceConfig);
-            services.AddHealthCheck(Configuration);
+            services.AddHealthCheck(Configuration, serviceConfig);
 
             services.AddStackExchangeRedisCache(options =>
             {

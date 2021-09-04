@@ -14,11 +14,13 @@ namespace Store.EndPoints.API.Extension
 {
     public static class ServiceExtension
     {
-        public static void AddHealthCheck(this IServiceCollection services, IConfiguration configuration)
+        public static void AddHealthCheck(this IServiceCollection services,
+            IConfiguration configuration, ServiceConfig serviceConfig)
         {
             var uow = new UnitOfWorkConfig(configuration);
             services.AddHealthChecks()
-                .AddSqlServer(uow.SqlServerConnectionString, tags: new List<string> { "DB" });
+                .AddSqlServer(uow.SqlServerConnectionString, tags: new List<string> { "StoreDB" })
+                .AddRedis(serviceConfig.RedisConnectionString, tags: new List<string> { "CacheDB" });
         }
 
         public static void AddSwagger(this IServiceCollection services, ServiceConfig config)
