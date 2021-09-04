@@ -9,6 +9,9 @@
 //------------------------------------------------------------------------------
 
 namespace Store.DomainModels.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -36,7 +39,7 @@ namespace Store.DomainModels.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DDD.DomainModels.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Store.DomainModels.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -54,6 +57,60 @@ namespace Store.DomainModels.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to خطا در لایه دسترسی به داده ها.
+        /// </summary>
+        internal static string DataAccessException {
+            get {
+                return ResourceManager.GetString("DataAccessException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to خطا در آماده سازی دیتابیس.
+        /// </summary>
+        internal static string InitializeDataBaseException {
+            get {
+                return ResourceManager.GetString("InitializeDataBaseException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to نام محصول تکراری می باشد.
+        /// </summary>
+        internal static string ProductNameDuplicateException {
+            get {
+                return ResourceManager.GetString("ProductNameDuplicateException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to محصول مورد نظر یافت نشد.
+        /// </summary>
+        internal static string ProductNotFoundException {
+            get {
+                return ResourceManager.GetString("ProductNotFoundException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to نام آپشن محصول تکراری می باشد.
+        /// </summary>
+        internal static string ProductOptionNameDuplicateException {
+            get {
+                return ResourceManager.GetString("ProductOptionNameDuplicateException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to آپشن محصول مورد نظر یافت نشد.
+        /// </summary>
+        internal static string ProductOptionNotFoundException {
+            get {
+                return ResourceManager.GetString("ProductOptionNotFoundException", resourceCulture);
             }
         }
     }
