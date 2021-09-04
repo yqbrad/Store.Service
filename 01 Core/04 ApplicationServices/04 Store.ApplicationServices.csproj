@@ -8,8 +8,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<Folder Include="Agg\Event\" />
-		<Folder Include="Agg\Request\" />
+		<Folder Include="ProductAgg\Event\" />
+		<Folder Include="ProductOptionAgg\Event\" />
 	</ItemGroup>
 
 	<ItemGroup>
