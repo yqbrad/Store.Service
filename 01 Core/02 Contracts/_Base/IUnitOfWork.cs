@@ -17,6 +17,5 @@ namespace Store.Contracts._Base
         Task RollbackAsync();
 
         IProductRepository Product { get; }
-        IProductOptionRepository ProductOption { get; }
     }
 }

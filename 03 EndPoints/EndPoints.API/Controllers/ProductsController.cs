@@ -1,10 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Store.ApplicationServices.ProductAgg.Request;
-using Store.ApplicationServices.ProductOptionAgg.Request;
 using Store.DomainModels.ProductAgg.Dtoes;
 using Store.DomainModels.ProductAgg.Requests;
-using Store.DomainModels.ProductOptionAgg.Dtoes;
-using Store.DomainModels.ProductOptionAgg.Requests;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

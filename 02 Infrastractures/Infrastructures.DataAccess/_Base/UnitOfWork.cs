@@ -10,20 +10,17 @@ namespace Store.Infrastructure.DataAccess._Base
         where TDbContext : BaseDbContext
     {
         public IProductRepository Product { get; }
-        public IProductOptionRepository ProductOption { get; }
 
         private readonly TDbContext _dbContext;
         private readonly IUnitOfWorkConfiguration _config;
         public UnitOfWork(TDbContext dbContext,
             IUnitOfWorkConfiguration config,
-            IProductRepository product,
-            IProductOptionRepository productOption)
+            IProductRepository product)
         {
             _dbContext = dbContext;
             _config = config;
 
             Product = product;
-            ProductOption = productOption;
         }
 
         public void InitiateDatabase()

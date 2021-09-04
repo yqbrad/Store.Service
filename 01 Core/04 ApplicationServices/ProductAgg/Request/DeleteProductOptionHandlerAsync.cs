@@ -2,20 +2,18 @@
 using Store.ApplicationServices._Base;
 using Store.Contracts._Base;
 using Store.DomainModels.ProductAgg.Exceptions;
-using Store.DomainModels.ProductOptionAgg.Dtoes;
-using Store.DomainModels.ProductOptionAgg.Exceptions;
-using Store.DomainModels.ProductOptionAgg.Requests;
+using Store.DomainModels.ProductAgg.Requests;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Store.ApplicationServices.ProductOptionAgg.Request
+namespace Store.ApplicationServices.ProductAgg.Request
 {
-    public class GetProductOptionHandlerAsync : RequestHandlerAsync<GetProductOption, ProductOptionDetails>
+    public class DeleteProductOptionHandlerAsync : RequestHandlerByInAsync<DeleteProductOption>
     {
-        public GetProductOptionHandlerAsync(IUnitOfWork unitOfWork, IEventBus eventBus)
+        public DeleteProductOptionHandlerAsync(IUnitOfWork unitOfWork, IEventBus eventBus)
             : base(unitOfWork, eventBus) { }
 
-        public override async Task<ProductOptionDetails> HandleAsync(GetProductOption req)
+        public override async Task HandleAsync(DeleteProductOption req)
         {
             var product = await UnitOfWork.Product.GetIncludeOptionsAsync(req.ProductId);
             if (product is null)
@@ -25,7 +23,11 @@ namespace Store.ApplicationServices.ProductOptionAgg.Request
             if (productOption is null)
                 throw new ProductOptionNotFoundException();
 
-            return productOption;
+            productOption.Delete();
+            product.RemoveOption(productOption);
+
+            UnitOfWork.Product.Update(product);
+            await UnitOfWork.CommitAsync();
         }
     }
 }

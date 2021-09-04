@@ -1,14 +1,13 @@
-﻿using Framework.Domain.EventBus;
+﻿using System.Linq;
+using System.Threading.Tasks;
+using Framework.Domain.EventBus;
 using Store.ApplicationServices._Base;
 using Store.Contracts._Base;
 using Store.DomainModels.ProductAgg.Exceptions;
-using Store.DomainModels.ProductOptionAgg.Exceptions;
-using Store.DomainModels.ProductOptionAgg.Requests;
-using Store.DomainModels.ProductOptionAgg.ValueObjects;
-using System.Linq;
-using System.Threading.Tasks;
+using Store.DomainModels.ProductAgg.Requests;
+using Store.DomainModels.ProductAgg.ValueObjects;
 
-namespace Store.ApplicationServices.ProductOptionAgg.Request
+namespace Store.ApplicationServices.ProductAgg.Request
 {
     public class UpdateProductOptionHandlerAsync : RequestHandlerByInAsync<UpdateProductOption>
     {
@@ -27,7 +26,8 @@ namespace Store.ApplicationServices.ProductOptionAgg.Request
 
             productOption.Update(new ProductOptionName(req.Name),
                 new ProductOptionDescription(req.Description));
-            UnitOfWork.ProductOption.Update(productOption);
+
+            UnitOfWork.Product.Update(product);
             await UnitOfWork.CommitAsync();
         }
     }
