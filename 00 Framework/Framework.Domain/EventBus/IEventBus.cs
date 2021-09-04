@@ -8,8 +8,6 @@ namespace Framework.Domain.EventBus
     {
         public IApplicant Applicant { get; }
 
-        ApiServices GetApiServices();
-
         #region Event
         Task PublishInternalAsync<TClass, TId>(TClass aggregateRoot)
             where TId : IEquatable<TId>
