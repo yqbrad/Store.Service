@@ -18,13 +18,13 @@ namespace Store.DomainModels.ProductAgg.Entities
 
         private Product() { }
 
-        public Product(Guid id,
+        public Product(
             ProductName name,
             ProductDescription description,
             ProductPrice price,
             ProductDeliveryPrice deliveryPrice)
         {
-            Id = id;
+            Id = Guid.NewGuid();
             Name = name;
             Description = description;
             Price = price;
