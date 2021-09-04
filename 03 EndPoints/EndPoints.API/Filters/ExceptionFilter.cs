@@ -20,9 +20,9 @@ namespace Store.EndPoints.API.Filters
             var message = "خطای سرور";
             //LogType errorType;
 
-#if DEBUG
-            message = ex.ToString();
-#endif
+//#if DEBUG
+//            message = ex.ToString();
+//#endif
 
             switch (ex)
             {

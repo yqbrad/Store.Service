@@ -6,11 +6,13 @@ namespace Store.DomainModels.ProductAgg.Dtoes
 {
     public class ProductDetails : IDto
     {
-        public Guid Id { get; private set; }
-        public string Name { get; private set; }
-        public string Description { get; private set; }
-        public decimal Price { get; private set; }
-        public decimal DeliveryPrice { get; private set; }
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public decimal Price { get; set; }
+        public decimal DeliveryPrice { get; set; }
+
+        public ProductDetails() { }
 
         public ProductDetails(Product product)
         {

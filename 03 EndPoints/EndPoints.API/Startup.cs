@@ -30,6 +30,11 @@ namespace Store.EndPoints.API
             services.AddSwagger(serviceConfig);
             services.AddHealthCheck(Configuration);
 
+            services.AddStackExchangeRedisCache(options =>
+            {
+                options.Configuration = serviceConfig.RedisConnectionString;
+            });
+
             services.AddMvc(option =>
             {
                 option.Filters.Add(new ProducesResponseTypeAttribute(StatusCodes.Status200OK));

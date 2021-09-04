@@ -5,10 +5,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Store.ApplicationServices.ProductAgg.Request;
 using Store.Contracts;
 using Store.Contracts._Base;
+using Store.EndPoints.API.Cache;
 using Store.EndPoints.API.Configuration;
 using Store.Infrastructure.DataAccess._Base;
 using Store.Infrastructure.DataAccess.ProductAgg;
 using Store.Infrastructure.Service;
+using Store.Infrastructure.Service.Cache;
 using Store.Infrastructure.Service.Dispatcher;
 using Store.Infrastructure.Service.EventSourcing;
 
@@ -25,6 +27,8 @@ namespace Store.EndPoints.API
 
             services.AddSingleton<IInternalEventDispatcher, InternalEventDispatcher>();
             services.AddScoped<IEventBus, EventBus>();
+
+            services.AddSingleton<ICacheProvider, CacheProvider>();
 
             services.AddScoped<IProductRepository, ProductRepository>();
 
