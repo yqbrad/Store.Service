@@ -23,14 +23,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="ProductOptionAgg\Dtoes\" />
-	  <Folder Include="ProductOptionAgg\Events\" />
-	  <Folder Include="ProductOptionAgg\Exceptions\" />
-	  <Folder Include="ProductOptionAgg\Requests\" />
-	  <Folder Include="ProductOptionAgg\ValueObjects\" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <ProjectReference Include="..\..\00 Framework\Framework.Domain\Framework.Domain.csproj" />
 	  <ProjectReference Include="..\..\00 Framework\Framework.Tools\Framework.Tools.csproj" />
 	</ItemGroup>
