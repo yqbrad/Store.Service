@@ -3,6 +3,7 @@ using Framework.Domain.Events;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Store.ApplicationServices.ProductAgg.Request;
+using Store.ApplicationServices.ProductOptionAgg.Request;
 using Store.Contracts;
 using Store.Contracts._Base;
 using Store.EndPoints.API.Configuration;
@@ -37,6 +38,11 @@ namespace Store.EndPoints.API
             services.AddScoped<UpdateProductHandlerAsync>();
             services.AddScoped<GetAllProductHandlerAsync>();
 
+            services.AddScoped<AddProductOptionHandlerAsync>();
+            services.AddScoped<DeleteProductOptionHandlerAsync>();
+            services.AddScoped<GetAllProductOptionsHandlerAsync>();
+            services.AddScoped<GetProductOptionHandlerAsync>();
+            services.AddScoped<UpdateProductOptionHandlerAsync>();
         }
     }
 }
