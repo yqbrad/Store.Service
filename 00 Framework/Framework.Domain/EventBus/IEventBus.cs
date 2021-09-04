@@ -6,9 +6,6 @@ namespace Framework.Domain.EventBus
 {
     public interface IEventBus
     {
-        public IApplicant Applicant { get; }
-
-        #region Event
         Task PublishInternalAsync<TClass, TId>(TClass aggregateRoot)
             where TId : IEquatable<TId>
             where TClass : BaseAggregateRoot<TId>;
@@ -16,6 +13,5 @@ namespace Framework.Domain.EventBus
         Task PublishExternalAsync<TClass, TId>(TClass aggregateRoot)
             where TId : IEquatable<TId>
             where TClass : BaseAggregateRoot<TId>;
-        #endregion
     }
 }

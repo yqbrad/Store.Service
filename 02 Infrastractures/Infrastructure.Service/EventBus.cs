@@ -10,16 +10,13 @@ namespace Store.Infrastructure.Service
 {
     public class EventBus : IEventBus
     {
-        public IApplicant Applicant { get; }
 
         private readonly IEventSource _eventSource;
         private readonly IInternalEventDispatcher _internalEventDispatcher;
 
         public EventBus(IInternalEventDispatcher internalEventDispatcher,
-            IEventSource eventSource, IApplicant applicant)
+            IEventSource eventSource)
         {
-            Applicant = applicant;
-
             _internalEventDispatcher = internalEventDispatcher;
             _eventSource = eventSource;
         }
