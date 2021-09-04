@@ -1,20 +1,23 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Store.Contracts._Base;
+using Store.DomainModels.ProductAgg.Entities;
+using Store.DomainModels.ProductOptionAgg.Entities;
 
 namespace Store.Infrastructure.DataAccess._Base
 {
-    public class StoreDbContext: BaseDbContext
+    public class StoreDbContext : BaseDbContext
     {
         #region DbSets
-        //public virtual DbSet<App> App { get; set; } 
+        public virtual DbSet<Product> Product { get; set; }
+        public virtual DbSet<ProductOption> ProductOption { get; set; }
         #endregion
 
         private readonly IUnitOfWorkConfiguration _configuration;
 
-        public StoreDbContext(DbContextOptions<StoreDbContext> options, 
-            IUnitOfWorkConfiguration configuration) : base(options) 
+        public StoreDbContext(DbContextOptions<StoreDbContext> options,
+            IUnitOfWorkConfiguration configuration) : base(options)
             => _configuration = configuration;
-        
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(_configuration.SqlServerConnectionString);
