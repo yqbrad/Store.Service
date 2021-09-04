@@ -1,23 +1,27 @@
 ﻿using Framework.Domain.Events;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Framework.Domain.BaseModels
 {
     public abstract class BaseEntity<TId> where TId : IEquatable<TId>
     {
         public TId Id { get; protected set; }
-        private Action<IEvent> _applier;
-        protected abstract void SetStateByEvent(IEvent @event);
 
-        protected BaseEntity() { }
+        private readonly List<IEvent> _events;
 
-        public BaseEntity(Action<IEvent> applier) => _applier = applier;
+        protected BaseEntity()
+            => _events = new List<IEvent>();
 
-        public void HandleEvent(IEvent @event)
-        {
-            SetStateByEvent(@event);
-            _applier?.Invoke(@event);
-        }
+        protected void AddEvent(IEvent @event)
+            => _events.Add(@event);
+
+        public IEnumerable<IEvent> GetEvents()
+            => _events.AsEnumerable();
+
+        public void ClearEvents()
+            => _events.Clear();
 
         public override bool Equals(object obj)
         {
