@@ -4,6 +4,9 @@ namespace Store.DomainModels._Exceptions
 {
     public enum ExceptionType
     {
+        InitializeDataBaseException = -102,
+        DataAccessException = -101,
+
         InvalidValueObjectStateException = 101
     }
 
