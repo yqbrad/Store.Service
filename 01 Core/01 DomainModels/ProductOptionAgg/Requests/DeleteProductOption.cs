@@ -1,15 +1,17 @@
-﻿using System;
-using Framework.Domain.Requests;
+﻿using Framework.Domain.Requests;
+using System;
 
 namespace Store.DomainModels.ProductOptionAgg.Requests
 {
     public class DeleteProductOption : IRequest
     {
-        public Guid Id { get; private set; }
+        public Guid ProductOptionId { get; private set; }
+        public Guid ProductId { get; private set; }
 
-        public DeleteProductOption(Guid id)
+        public DeleteProductOption(Guid productId, Guid productOptionId)
         {
-            Id = id;
+            ProductId = productId;
+            ProductOptionId = productOptionId;
         }
     }
 }
