@@ -1,8 +1,8 @@
-﻿using Framework.Domain.Events;
-using Store.DomainModels.ProductOptionAgg.Entities;
-using System;
+﻿using System;
+using Framework.Domain.Events;
+using Store.DomainModels.ProductAgg.Entities;
 
-namespace Store.DomainModels.ProductOptionAgg.Events
+namespace Store.DomainModels.ProductAgg.Events
 {
     public class ProductOptionDeleted : IEvent
     {

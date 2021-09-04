@@ -1,6 +1,6 @@
 ﻿using Store.DomainModels._Exceptions;
 
-namespace Store.DomainModels.ProductOptionAgg.Exceptions
+namespace Store.DomainModels.ProductAgg.Exceptions
 {
     public class ProductOptionNameDuplicateException : BaseException
     {

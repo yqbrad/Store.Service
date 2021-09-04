@@ -1,16 +1,16 @@
-﻿using Framework.Domain.Events;
-using Store.DomainModels.ProductOptionAgg.Entities;
-using System;
+﻿using System;
+using Framework.Domain.Events;
+using Store.DomainModels.ProductAgg.Entities;
 
-namespace Store.DomainModels.ProductOptionAgg.Events
+namespace Store.DomainModels.ProductAgg.Events
 {
-    public class ProductOptionUpdated : IEvent
+    public class ProductOptionAdded : IEvent
     {
         public Guid Id { get; private set; }
         public string Name { get; private set; }
         public string Description { get; private set; }
 
-        public ProductOptionUpdated(ProductOption option)
+        public ProductOptionAdded(ProductOption option)
         {
             Id = option.Id;
             Name = option.Name;

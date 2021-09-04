@@ -1,7 +1,7 @@
 ﻿using Framework.Domain.BaseModels;
 using Store.DomainModels._Exceptions;
 
-namespace Store.DomainModels.ProductOptionAgg.ValueObjects
+namespace Store.DomainModels.ProductAgg.ValueObjects
 {
     public class ProductOptionName : BaseValueObject<ProductOptionName>
     {

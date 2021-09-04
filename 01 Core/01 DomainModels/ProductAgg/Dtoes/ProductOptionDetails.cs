@@ -1,8 +1,8 @@
-﻿using Framework.Domain.Dtoes;
-using Store.DomainModels.ProductOptionAgg.Entities;
-using System;
+﻿using System;
+using Framework.Domain.Dtoes;
+using Store.DomainModels.ProductAgg.Entities;
 
-namespace Store.DomainModels.ProductOptionAgg.Dtoes
+namespace Store.DomainModels.ProductAgg.Dtoes
 {
     public class ProductOptionDetails : IDto
     {

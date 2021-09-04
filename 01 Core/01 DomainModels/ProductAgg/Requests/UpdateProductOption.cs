@@ -1,7 +1,7 @@
-﻿using Framework.Domain.Requests;
-using System;
+﻿using System;
+using Framework.Domain.Requests;
 
-namespace Store.DomainModels.ProductOptionAgg.Requests
+namespace Store.DomainModels.ProductAgg.Requests
 {
     public class UpdateProductOption : IRequest
     {

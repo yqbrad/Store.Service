@@ -1,7 +1,6 @@
 ﻿using Framework.Domain.BaseModels;
 using Store.DomainModels.ProductAgg.Events;
 using Store.DomainModels.ProductAgg.ValueObjects;
-using Store.DomainModels.ProductOptionAgg.Entities;
 using System;
 using System.Collections.Generic;
 

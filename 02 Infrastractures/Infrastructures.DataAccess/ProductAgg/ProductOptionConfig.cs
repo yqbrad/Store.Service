@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Store.DomainModels.ProductOptionAgg.Entities;
+using Store.DomainModels.ProductAgg.Entities;
 
-namespace Store.Infrastructure.DataAccess.ProductOptionAgg
+namespace Store.Infrastructure.DataAccess.ProductAgg
 {
     public class ProductOptionConfig : IEntityTypeConfiguration<ProductOption>
     {

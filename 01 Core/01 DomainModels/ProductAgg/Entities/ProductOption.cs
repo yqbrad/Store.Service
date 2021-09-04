@@ -1,12 +1,11 @@
 ﻿using Framework.Domain.BaseModels;
-using Store.DomainModels.ProductAgg.Entities;
-using Store.DomainModels.ProductOptionAgg.Events;
-using Store.DomainModels.ProductOptionAgg.ValueObjects;
+using Store.DomainModels.ProductAgg.Events;
+using Store.DomainModels.ProductAgg.ValueObjects;
 using System;
 
-namespace Store.DomainModels.ProductOptionAgg.Entities
+namespace Store.DomainModels.ProductAgg.Entities
 {
-    public class ProductOption : BaseAggregateRoot<Guid>
+    public class ProductOption : BaseEntity<Guid>
     {
         public ProductOptionName Name { get; private set; }
         public ProductOptionDescription Description { get; private set; }

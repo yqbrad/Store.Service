@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Store.Contracts._Base;
 using Store.DomainModels.ProductAgg.Entities;
-using Store.DomainModels.ProductOptionAgg.Entities;
 
 namespace Store.Infrastructure.DataAccess._Base
 {
@@ -9,7 +8,6 @@ namespace Store.Infrastructure.DataAccess._Base
     {
         #region DbSets
         public virtual DbSet<Product> Product { get; set; }
-        public virtual DbSet<ProductOption> ProductOption { get; set; }
         #endregion
 
         private readonly IUnitOfWorkConfiguration _configuration;
