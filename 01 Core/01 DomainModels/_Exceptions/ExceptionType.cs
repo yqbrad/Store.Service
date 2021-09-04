@@ -9,7 +9,8 @@ namespace Store.DomainModels._Exceptions
 
         InvalidValueObjectStateException = 101,
         ProductNotFoundException = 102,
-        ProductOptionNotFoundException = 103
+        ProductOptionNotFoundException = 103,
+        ProductNameDuplicateException = 104,
     }
 
     public static class ExceptionTypeExtension
