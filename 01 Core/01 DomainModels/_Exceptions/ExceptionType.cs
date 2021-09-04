@@ -7,7 +7,9 @@ namespace Store.DomainModels._Exceptions
         InitializeDataBaseException = -102,
         DataAccessException = -101,
 
-        InvalidValueObjectStateException = 101
+        InvalidValueObjectStateException = 101,
+        ProductNotFoundException = 102,
+        ProductOptionNotFoundException = 103
     }
 
     public static class ExceptionTypeExtension
